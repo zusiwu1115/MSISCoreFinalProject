@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+
+  <title>dashboard</title>
+</head>
+
+
+<main id="dashboardApp">
+  <div>
+  <div class="topnav">
+    <a @click="goBackSite()">Back</a>
+  </div>
+
+    <div>
+      <center>
+        <h2>Key Performance Indicators for turbine {{dashboard[0].turbineSerialNumber}}
+          at {{dashboardSite[0].siteName}}</h2>
+      </center>
+    </div>
+  </div>
+
+    <body>
+    <div id="kpiOutput">
+      <h4>Output</h4>
+      <div id="outputChart" class="col">
+      </div>
+    </div>
+
+    <div id="kpiAvailability">
+      <h4>Availability</h4>
+      <div id="availabilityChart" class="col">
+      </div>
+    </div>
+
+    <div id="kpiCompressorEfficiency">
+      <h4>Compressor Efficiency</h4>
+      <div id="compressorEfficiencyChart" class="col">
+      </div>
+    </div>
+
+    <div id="kpiHeat">
+      <h4>Heat Rate</h4>
+      <div id="heatChart" class="col">
+      </div>
+    </div>
+
+    <div id="kpiHours">
+      <h4>Fired Hours</h4>
+      <div id="hoursChart" class="col">
+      </div>
+    </div>
+
+    <div id="kpiReliability">
+      <h4>Reliability</h4>
+      <div id="reliabilityChart" class="col">
+      </div>
+    </div>
+
+    <div class="row place">
+      <section class="col place">
+        <div class="row">
+          <div class="col placeholder">
+            <div id="kpiStarts">
+              <h4>Starts</h4>
+              <div id="startsChart" class="col">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="col placeholder">
+        <div id="kpiTrips">
+          <h4>Trips</h4>
+          <div id="tripsChart" class="col">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</main>
+
+<!-- development version, includes helpful console warnings -->
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script src="js/dashboard.app.js"></script>
+<!-- HIGHCHARTS -->
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="https://code.highcharts.com/highcharts-more.js"></script>
+<script src="https://code.highcharts.com/modules/exporting.js"></script>
+<script src="https://code.highcharts.com/modules/export-data.js"></script>
+<script src="js/kpiOutput.app.js"></script>
+<script src="js/kpiAvailability.app.js"></script>
+<script src="js/kpiCompressorEfficiency.app.js"></script>
+<script src="js/kpiHeat.app.js"></script>
+<script src="js/kpiHours.app.js"></script>
+<script src="js/kpiReliability.app.js"></script>
+<script src="js/kpiStarts.app.js"></script>
+<script src="js/kpiTrips.app.js"></script>
+
+</html>
