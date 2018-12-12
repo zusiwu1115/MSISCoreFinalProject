@@ -57,8 +57,8 @@
           </tr>
         </thead>
         <!-- <tbody v-for="s in site" :key="s.id" :id="'site- ' + s.id"> -->
-        <tbody v-for="sd in siteDetails" :key="sd.turbineDeployedId" :id="'turbine- ' + sd.turbineDeployedId" >
-          <a href="http://ec2-34-222-243-254.us-west-2.compute.amazonaws.com/dashboard.html?turbineDeployedId=1&siteId=1"><tr>
+        <tbody v-for="sd in siteDetails" :key="sd.turbineDeployedId" :id="'turbine- ' + sd.turbineDeployedId" @click="gotoTurbine(sd.turbineDeployedId, sd.siteId)">
+          <tr>
             <td>{{sd.serialNumber}}</td>
             <td>{{sd.deployedDate}}</td>
             <td>{{sd.totalFiredHours}}</td>
@@ -66,7 +66,6 @@
             <td>{{sd.lastPlannedOutageDate}}</td>
             <td>{{sd.lastUnplannedOutageDate}}</td>
            </tr>
-           </a>
         </tbody>
       </table>
     </div>
