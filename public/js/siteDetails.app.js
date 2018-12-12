@@ -8,7 +8,7 @@ var siteDetailsApp = new Vue({
 
     gotoTurbine(tid, sid) {
       console.log(sid);
-      window.location = 'dashboard.html?turbineDeployedId=' + tid + '&siteId=' + sid;
+      window.location = 'http://ec2-34-222-243-254.us-west-2.compute.amazonaws.com/dashboard.html?turbineDeployedId=1&siteId=1';
     }
   },
 
